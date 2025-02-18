@@ -33,6 +33,7 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         .navbar-brand {
@@ -103,9 +104,10 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 7em;
             font-weight: 400;
-            color: rgb(255, 0, 0);
+            color: white;
             letter-spacing: 12px;
             text-transform: uppercase;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         /* Main Content */
@@ -154,13 +156,13 @@
 
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
             margin-bottom: 3rem;
         }
 
         .project-card {
-            background: rgb(155, 0, 0);
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.07);
             padding: 2rem;
             text-decoration: none;
@@ -168,6 +170,10 @@
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .project-card::before {
@@ -197,6 +203,8 @@
             font-weight: 400;
             margin-bottom: 1rem;
             letter-spacing: 1px;
+            position: relative;
+            z-index: 2;
         }
 
         /* Placeholder styling */
@@ -204,10 +212,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 200px;
+            min-height: 180px;
             font-style: italic;
             color: #888;
             text-align: center;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .placeholder-card p {
+            font-size: 1.1rem;
+            padding: 0 1rem;
         }
 
         /* Footer */
@@ -218,6 +232,7 @@
             color: #999999;
             font-weight: 300;
             letter-spacing: 1px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         footer a {
@@ -254,6 +269,14 @@
 
             .project-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .about-section {
+                margin-bottom: 4rem;
+            }
+
+            .project-category {
+                margin-bottom: 4rem;
             }
         }
     </style>
@@ -297,6 +320,18 @@
                 </a>
                 <a href="interactive-mandala.html" class="project-card">
                     <h4>Interactive Mandala</h4>
+                </a>
+                <a href="exquisite-corpse.html" class="project-card">
+                    <h4>Exquisite Corpse</h4>
+                </a>
+                <a href="earth-to-jupiter.html" class="project-card">
+                    <h4>Earth to Jupiter Clock</h4>
+                </a>
+                <a href="hallucinogenic-rabbit.html" class="project-card">
+                    <h4>Hallucinogenic Rabbit</h4>
+                </a>
+                <a href="lost-and-found.html" class="project-card">
+                    <h4>Lost and Found</h4>
                 </a>
             </div>
         </section>
